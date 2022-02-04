@@ -1,0 +1,354 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --shadow-1 : 0 .125rem .25rem rgba(0, 0, 0, 0.075);
+    --shadow-2 : 0 .5rem .1rem rgba(0, 0, 0, 0.15);
+    --shadow-3 : 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+
+div.mainSection{
+    height: 100vh;
+    background-color: #242526;
+}
+
+div.btnWrapper{
+    width: 1100px;
+    margin: auto;
+    padding-top: 8rem;
+}
+
+div.btnWrapper a.linking{
+    padding: 25px;
+    font-size: 25px;
+    font-weight: 900;
+    background-color: rgb(255 255 255 / 10%);
+    box-shadow: 1px 0rem 11px 4px rgb(0 0 0);
+    text-decoration: none;
+    color: white;
+    display: block;
+    border-radius: 15px;
+    width: 250px;
+    margin: auto;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.3s;
+}
+
+div.btnWrapper a.linking:hover{
+    background-color: rgba(255, 255, 255, 0.164);
+    transform: translateY(-20px);
+    color: rgba(255, 255, 255, 0.459);
+}
+
+/* modal design */
+
+
+div.mainBanner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url('../img/background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.bannerWrapper{
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+div.bannerWrapper h1{
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+div.bannerWrapper p{
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+div.bannerWrapper button{
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 25px;
+    font-size: 16px;
+    font-weight: 900;
+    color: black;
+    background: white;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+div.bannerWrapper button:hover{
+    background: rgba(255, 255, 255, 0.322);
+    color: white;
+}
+
+
+/* modal */
+
+
+div.mostofa_modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.404);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.mostofa_modal div.modal_content{
+    border-radius: 10px;
+    border-left:6px solid orangered;
+    border-right:6px solid orangered;
+    box-shadow: var(--shadow-3);
+    width: 500px;
+    height: auto;
+    background: white;
+    transform: translateY(-150px);
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+}
+
+div.mostofa_modal.active1{
+    opacity: 1;
+    pointer-events: auto;
+}
+div.mostofa_modal div.modal_content.active2{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+div.modal_content div.modal_header{
+    border-bottom: 2px solid #ccc;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.modal_header h3{
+    font-size: 26px;
+}
+
+div.modal_header button{
+    text-align: center;
+    outline: none;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(218, 218, 218);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+div.modal_header button i{
+    padding: 7px 0px;
+    font-size: 15px;
+    color: rgb(121, 121, 121);
+}
+
+div.modal_body {
+    padding: 15px 20px;
+    line-height: 23px;
+}
+
+
+div.modal_footer{
+    padding: 15px 20px;
+    border-top: 2px solid #ccc;
+    text-align: right;
+}
+
+div.modal_footer button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: rgb(212, 32, 0);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+
+/* alert box design */
+
+div.mostofaAlert{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.mostofaAlert div.alertContent{
+    width: 520px;
+    border-radius: 10px;
+    border-left:6px solid orangered;
+    border-right:6px solid orangered;
+    box-shadow: var(--shadow-3);
+    background: white;
+    transform: translateY(-150px);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
+
+div.mostofaAlert.aActive1{
+    opacity: 1;
+    pointer-events: auto;
+}
+div.mostofaAlert div.alertContent.aActive2{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+div.alertContent div.alertHeader{
+    border-bottom: 2px solid #ccc;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.alertHeader h3{
+    font-size: 26px;
+}
+
+div.alertHeader button{
+    text-align: center;
+    outline: none;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(218, 218, 218);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+div.alertContent div.alertBody{
+    padding: 15px 20px;
+}
+
+div.alertContent div.alertFooter{
+    padding: 25px 20px;
+    text-align: right;
+}
+
+div.alertFooter a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+div.alertFooter a.edit{
+    color: #3088fc;
+    margin-right: 20px;
+    padding: 10px 15px;
+}
+
+div.alertFooter a.discart{
+    background: #3088fc;
+    padding: 10px 25px;
+    border-radius: 4px;
+    color: white;
+}
+
+
+/* Accordion design */
+
+
+div.mainAccordionSec{
+    padding: 80px 0px;
+    background: rgb(22 22 22);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.accordionWrapper{
+    width: 600px;
+}
+
+div.singleAccordion{
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+div.singleAccordion:last-child{
+    margin-bottom: 0px;
+}
+
+div.aHeader{
+    padding: 15px 25px;
+    background-color: rgba(255, 255, 255, 0.20);
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+div.aHeader i{
+    font-size: 23px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+div.aHeader.show i{
+    transform: rotate(90deg);
+} 
+
+div.aBody{
+    overflow: hidden;
+    transition: all 0.3s;
+    height: 0px;
+}
+
+div.aBody div.content{
+    padding: 15px 20px;
+    line-height: 25px;
+}
+
