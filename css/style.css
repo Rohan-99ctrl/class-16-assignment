@@ -23,12 +23,14 @@ html{
 div.mainSection{
     height: 100vh;
     background-color: #242526;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 div.btnWrapper{
     width: 1100px;
     margin: auto;
-    padding-top: 8rem;
 }
 
 div.btnWrapper a.linking{
@@ -47,6 +49,10 @@ div.btnWrapper a.linking{
     text-align: center;
     line-height: 40px;
     transition: all 0.3s;
+}
+
+div.btnWrapper a.linking:last-child{
+    margin-bottom: 0px;
 }
 
 div.btnWrapper a.linking:hover{
@@ -351,4 +357,84 @@ div.aBody div.content{
     padding: 15px 20px;
     line-height: 25px;
 }
+
+
+
+/* tabs design */
+
+
+
+div.mainTabSec{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(38 38 38);
+    color: white;
+}
+
+div.rohan_tab{
+    width: 600px;
+    margin: auto;
+    box-shadow: 0px 0px 20px 4px black;
+    padding: 25px;
+    background-color: transparent;
+    border-radius: 10px;
+    border-left: 7px solid red;
+    border-right: 7px solid red;
+}
+
+div.tab_menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+div.tab_menu ul li{
+    display: block;
+    width: 20%;
+    height: 50px;
+    line-height: 45px;
+    text-align: center;
+}
+
+div.tab_menu ul li a{
+    display: block;
+    text-decoration: none;
+    font-weight: 900;
+    color: white;
+    border-bottom: 2px solid rgb(77, 77, 77);
+}
+
+div.tab_menu ul li a:active{
+    color: rgb(0, 255, 0);
+}
+
+div.tab_menu ul li a.active{
+    border-bottom: none;
+    border-left: 2px solid rgb(77, 77, 77);
+    border-right: 2px solid rgb(77, 77, 77);
+    border-top: 2px solid rgb(77, 77, 77);
+    border-radius: 5px 5px 0px 0px;
+}
+
+div.tab_pane{
+    display: none;
+}
+
+div.tab_pane.active{
+    display: block;
+}
+
+div.tab_pane h1{
+    margin-bottom: 15px;
+}
+
+div.tab_pane p{
+    line-height: 25px;
+    font-weight: 600;
+}
+
+
 
